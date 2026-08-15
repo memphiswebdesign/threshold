@@ -123,9 +123,37 @@ description: "Threshold Hospitality Group partners with a select group of hotel 
 </section>
 
 <section class="closing" id="contact">
-  <div class="wrap">
-    <h2 class="rise">Some opportunities deserve a different kind of operator. So do some owners.</h2>
-    <a class="cta cta-rev rise d1" href="mailto:{{ site.email }}">Start a conversation
-      <span class="arw" aria-hidden="true">&rarr;</span></a>
+  <div class="wrap closing-grid">
+    <div class="closing-copy">
+      <p class="closing-eyebrow rise">Start a conversation</p>
+      <h2 class="rise d1">Some opportunities deserve a different kind of operator &mdash; so do some owners.</h2>
+    </div>
+    <div class="closing-form-wrap rise d1">
+      <form class="contact-form" name="contact" netlify netlify-honeypot="bot-field" id="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="form-field">
+          <label for="cf-name">Full Name</label>
+          <input type="text" id="cf-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-phone">Phone Number</label>
+          <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+        </div>
+        <div class="form-field">
+          <label for="cf-message">How can we help</label>
+          <textarea id="cf-message" name="message" rows="5"></textarea>
+        </div>
+        <button class="form-submit" type="submit">Send message <span aria-hidden="true">&rarr;</span></button>
+      </form>
+      <div class="form-success" id="form-success" hidden>
+        <p class="form-success-head">Thank you.</p>
+        <p>We'll review your message and be in touch shortly.</p>
+      </div>
+    </div>
   </div>
 </section>

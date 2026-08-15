@@ -6,7 +6,7 @@
   "scripts": {
     "build:css": "tailwindcss -i ./_src/main.css -o ./assets/css/main.css --minify",
     "watch:css": "tailwindcss -i ./_src/main.css -o ./assets/css/main.css --watch",
-    "build": "npm run build:css && bundle exec jekyll build",
+    "build": "rm -rf _site && npm run build:css && bundle exec jekyll build",
     "dev": "npm run build:css && concurrently -n css,jekyll -c cyan,magenta \"npm:watch:css\" \"bundle exec jekyll serve --livereload\""
   },
   "devDependencies": {

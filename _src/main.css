@@ -95,7 +95,7 @@
   .lockup-text {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 7px;
   }
   .slot-word {
     font-weight: 500;
@@ -262,13 +262,24 @@
   /* ------ Image / Pause ------ */
   .pause { height: min(84vh, 760px); }
 
+  @keyframes pause-parallax {
+    0%  { background-position: 50% 80%; }
+    to  { background-position: 50% 40%; }
+  }
+
   .pause-bg {
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center 50%;
     position: relative;
     display: flex;
     align-items: flex-end;
+    animation: pause-parallax linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pause-bg { animation: none; background-position: center; }
   }
   .pause-bg::before {
     content: "";
@@ -534,6 +545,12 @@
     color: var(--white);
     padding: var(--s8) 0 var(--s7);
   }
+  .closing-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(280px, 400px);
+    gap: clamp(var(--s2), 8vw, var(--s5));
+    align-items: start;
+  }
   .closing h2 {
     font-size: var(--t-mega);
     line-height: 1.1;
@@ -542,29 +559,83 @@
     margin: 0;
     max-width: 17ch;
   }
-  .closing .cta { margin-top: var(--s5); }
-  .closing .details {
-    margin-top: var(--s8);
+  .closing-eyebrow {
+    font-size: var(--t-label);
+    letter-spacing: var(--tr-label);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--copper);
+    margin: 0 0 var(--s3);
+  }
+
+  /* Form */
+  .contact-form {
     display: flex;
-    gap: var(--s6);
-    flex-wrap: wrap;
-    font-size: var(--t-small);
+    flex-direction: column;
+    gap: var(--s3);
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-field label {
+    font-size: var(--t-label);
+    letter-spacing: var(--tr-label);
+    text-transform: uppercase;
+    font-weight: 600;
     color: var(--white-70);
-    line-height: 2;
   }
-  .closing .details a {
-    text-decoration: none;
-    border-bottom: 1px solid var(--rule-rev);
-    padding-bottom: 2px;
-  }
-  .closing .details b {
-    display: block;
+  .form-field input,
+  .form-field textarea {
+    background: transparent;
+    border: 1px solid var(--rule-rev);
     color: var(--white);
-    font-weight: 500;
+    font-family: var(--ff);
+    font-size: var(--t-small);
+    line-height: 1.5;
+    padding: 11px var(--s2);
+    border-radius: 0;
+    -webkit-appearance: none;
+    transition: border-color .2s ease;
   }
+  .form-field input::placeholder,
+  .form-field textarea::placeholder { color: var(--white-38); }
+  .form-field input:focus,
+  .form-field textarea:focus { outline: none; border-color: var(--copper); }
+  .form-field textarea { resize: vertical; min-height: 128px; }
+  .form-submit {
+    align-self: flex-start;
+    margin-top: var(--s1);
+    font-family: var(--ff);
+    font-size: var(--t-label);
+    letter-spacing: var(--tr-label);
+    text-transform: uppercase;
+    font-weight: 600;
+    background: none;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: var(--s2) var(--s3);
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+  }
+  .form-submit:hover { background: var(--white); color: var(--black); }
+
+  /* Success state */
+  .form-success { color: var(--white-70); line-height: 1.75; }
+  .form-success-head {
+    font-size: var(--t-display);
+    font-weight: 500;
+    letter-spacing: -.02em;
+    color: var(--white);
+    margin: 0 0 var(--s2);
+    line-height: 1.1;
+  }
+  .form-success p:last-child { margin: 0; font-size: var(--t-lead); }
+
   @media (max-width: 900px) {
     .closing { padding: var(--s7) 0 var(--s6); }
-    .closing .details { margin-top: var(--s7); gap: var(--s4); }
+    .closing-grid { grid-template-columns: 1fr; }
   }
 
   /* ------ Footer ------ */
@@ -598,11 +669,16 @@
   .foot-contact {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: var(--s2);
     font-size: var(--t-small);
     color: var(--white-70);
   }
   .foot-contact-sep { opacity: .35; }
+  @media (max-width: 600px) {
+    .foot-contact-sep { display: none; }
+    .foot-contact { gap: var(--s1); flex-direction: column; align-items: flex-start; }
+  }
   .legal {
     margin-top: var(--s5);
     padding-top: var(--s3);
