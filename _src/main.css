@@ -226,6 +226,7 @@
 
   .cta {
     display: inline-block;
+    position: relative;
     margin-top: var(--s3);
     font-size: var(--t-label);
     letter-spacing: var(--tr-label);
@@ -235,6 +236,17 @@
     border-bottom: 1px solid var(--black);
     padding-bottom: 5px;
   }
+  .cta::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--copper);
+    transition: width .2s ease-out;
+  }
+  .cta:hover::after { width: 100%; }
   .cta .arw {
     display: inline-block;
     transition: transform .35s var(--ease);
