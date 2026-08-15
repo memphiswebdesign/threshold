@@ -269,6 +269,7 @@
     z-index: 1;
     color: var(--white);
     padding-bottom: var(--s6);
+    width: 100%;
   }
   .pause-content h2 {
     font-size: var(--t-display);
