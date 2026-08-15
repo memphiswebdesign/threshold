@@ -1,0 +1,32 @@
+# Threshold Hospitality Group
+
+title: Threshold Hospitality Group
+tagline: Hospitality, considered.
+description: >-
+  Threshold Hospitality Group — placeholder description. Replace with the
+  approved copy from the brand content guide.
+email: ""
+
+# TODO: set the production domain before launch
+url: "https://thresholdhospitality.com"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+kramdown:
+  auto_ids: false
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from the generated site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - netlify.toml
+  - package.json
+  - package-lock.json
+  - node_modules
+  - vendor

@@ -1,0 +1,12 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+node_modules/
+.netlify/
+
+# Tailwind output — generated at build time
+assets/css/main.css
+
+.DS_Store
+*.log

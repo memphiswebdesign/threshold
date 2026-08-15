@@ -1,0 +1,17 @@
+{
+  "name": "threshold",
+  "version": "1.0.0",
+  "description": "Threshold Hospitality Group",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./_src/main.css -o ./assets/css/main.css --minify",
+    "watch:css": "tailwindcss -i ./_src/main.css -o ./assets/css/main.css --watch",
+    "build": "npm run build:css && bundle exec jekyll build",
+    "dev": "npm run build:css && concurrently -n css,jekyll -c cyan,magenta \"npm:watch:css\" \"bundle exec jekyll serve --livereload\""
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "concurrently": "^9.1.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

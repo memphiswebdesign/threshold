@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+  NODE_VERSION = "20"
+  RUBY_VERSION = "3.2.2"
+
+# Netlify runs `bundle install` automatically when it detects a Gemfile,
+# then our build command compiles Tailwind before `jekyll build`.
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

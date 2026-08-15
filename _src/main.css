@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Threshold Hospitality Group — design tokens
+
+   Tailwind v4 is configured in CSS, not a JS config file. Anything defined in
+   @theme becomes a utility automatically: --color-clay-500 gives you
+   `bg-clay-500`, `text-clay-500`, `border-clay-500`, etc.
+
+   TODO: swap the placeholder palette below for the real brand values once the
+   brand asset guide is in the repo.
+--------------------------------------------------------------------------- */
+
+@theme {
+  /* Manrope becomes the default sans, so `font-sans` and bare <body> use it. */
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Placeholder brand palette */
+  --color-ink-900: #14100d;
+  --color-ink-700: #3a322b;
+  --color-ink-500: #6b5f54;
+
+  --color-bone-100: #faf7f2;
+  --color-bone-200: #efe8dd;
+  --color-bone-300: #ddd2c2;
+
+  --color-clay-500: #a8734a;
+  --color-clay-600: #8c5d39;
+}
