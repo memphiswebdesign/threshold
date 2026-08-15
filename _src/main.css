@@ -86,18 +86,33 @@
   }
 
   /* ------ Logo / lockup ------ */
-  .slot-word {
-    font-weight: 500;
-    font-size: .875rem;
-    letter-spacing: .32em;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
   .lockup {
     display: flex;
     align-items: center;
     gap: var(--stem);
     text-decoration: none;
+  }
+  .lockup-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .slot-word {
+    font-weight: 500;
+    font-size: .8125rem;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 1;
+  }
+  .slot-sub {
+    font-size: .625rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 1;
+    opacity: .55;
   }
 
   /* ------ Header ------ */
@@ -179,7 +194,7 @@
 
   /* ------ Hero ------ */
   .hero {
-    min-height: calc(100vh - 88px);
+    min-height: 70vh;
     display: flex;
     align-items: center;
     padding-top: var(--s6);
@@ -205,8 +220,8 @@
     letter-spacing: var(--tr-label);
     text-transform: uppercase;
     font-weight: 600;
-    margin: var(--s6) 0 0;
-    color: var(--black-40);
+    margin: 0 0 var(--s3);
+    color: var(--copper);
   }
 
   .cta {
@@ -534,6 +549,19 @@
     text-decoration: none;
     border-bottom: 1px solid var(--rule-rev);
     padding-bottom: 2px;
+  }
+  .foot-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: var(--t-small);
+    color: var(--white-70);
+    line-height: 2;
+  }
+  .foot-contact b {
+    display: block;
+    color: var(--white);
+    font-weight: 500;
   }
   .legal {
     margin-top: var(--s5);
