@@ -288,7 +288,7 @@
   @media (max-width: 900px) { .pause { height: 64vh; } }
 
   /* ------ Core statement ------ */
-  .core { padding-top: var(--s8); padding-bottom: var(--s8); }
+  .core { padding-top: var(--s8); padding-bottom: var(--s6); }
   .core h2 {
     font-size: var(--t-mega);
     line-height: 1.08;
@@ -312,8 +312,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--s5);
-    border-top: 1px solid var(--rule);
-    padding-top: var(--s4);
+  }
+  .service {
+    border-top: 2px solid var(--copper);
+    padding-top: var(--s3);
   }
   .service h3 {
     font-size: var(--t-h3);
@@ -330,13 +332,7 @@
   }
   @media (max-width: 900px) {
     .services { padding-bottom: var(--s7); }
-    .services-grid {
-      grid-template-columns: 1fr;
-      gap: var(--s4);
-      border-top: 0;
-      padding-top: 0;
-    }
-    .service { border-top: 1px solid var(--rule); padding-top: var(--s3); }
+    .services-grid { grid-template-columns: 1fr; gap: var(--s4); }
   }
 
   /* ------ Approach (black field) ------ */
@@ -372,7 +368,7 @@
   @media (max-width: 900px) { .approach { padding: var(--s7) 0; } }
 
   /* ------ How we grow ------ */
-  .grow { padding-top: var(--s8); padding-bottom: var(--s8); }
+  .grow { padding-top: var(--s8); padding-bottom: var(--s6); }
   .grow h2 {
     font-size: var(--t-mega);
     line-height: 1.08;
@@ -481,7 +477,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--s5);
   }
-  .adv { border-top: 1px solid var(--rule); padding-top: var(--s3); }
+  .adv { border-top: 2px solid var(--copper); padding-top: var(--s3); }
   .adv b {
     display: block;
     font-size: var(--t-h3);
