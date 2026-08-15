@@ -85,21 +85,12 @@
     padding-right: var(--gutter);
   }
 
-  /* ------ Logo / lockup (SVG slot) ------ */
-  .slot-mark {
-    width: 30px; height: 30px;
-    border: 1px dashed currentColor;
-    opacity: .45;
-    flex: none;
-  }
+  /* ------ Logo / lockup ------ */
   .slot-word {
     font-weight: 500;
     font-size: .875rem;
     letter-spacing: .32em;
     text-transform: uppercase;
-    border-bottom: 1px dashed currentColor;
-    padding-bottom: 2px;
-    opacity: .8;
     white-space: nowrap;
   }
   .lockup {
