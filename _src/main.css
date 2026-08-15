@@ -417,7 +417,7 @@
     position: absolute;
     inset: 0;
     border: 1px solid var(--copper);
-    transform: translate(5%, 5%);
+    transform: translate(3%, 3%);
     pointer-events: none;
   }
   .portrait {
