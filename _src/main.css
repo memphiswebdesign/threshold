@@ -250,30 +250,40 @@
   /* ------ Image / Pause ------ */
   .pause { height: min(84vh, 760px); }
 
-  .imgslot {
-    background: var(--black);
-    position: relative;
-    overflow: hidden;
+  .pause-bg {
     height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
   }
-  .imgslot::before {
+  .pause-bg::before {
     content: "";
     position: absolute;
-    top: 0; bottom: 0;
-    left: 36%;
-    width: 1px;
-    background: var(--rule-rev);
+    inset: 0;
+    background: rgba(13,13,13,.58);
   }
-  .imgslot::after {
-    content: attr(data-shot);
-    position: absolute;
-    left: var(--s4); right: var(--s4); bottom: var(--s4);
-    font-size: 9px;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--white-38);
-    line-height: 1.9;
-    max-width: 52ch;
+  .pause-content {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    padding-bottom: var(--s6);
+  }
+  .pause-content h2 {
+    font-size: var(--t-display);
+    font-weight: 500;
+    letter-spacing: -.02em;
+    line-height: 1.1;
+    margin: 0;
+    max-width: 18ch;
+  }
+  .pause-content p {
+    font-size: var(--t-lead);
+    color: var(--white-70);
+    max-width: 48ch;
+    margin: var(--s3) 0 0;
+    line-height: 1.7;
   }
   @media (max-width: 900px) { .pause { height: 64vh; } }
 
@@ -402,7 +412,13 @@
     gap: var(--s6);
     align-items: start;
   }
-  .portrait { aspect-ratio: 3/4; }
+  .portrait {
+    aspect-ratio: 3/4;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
   .leader h2 {
     font-size: var(--t-display);
     line-height: 1.1;
