@@ -95,7 +95,7 @@
   .lockup-text {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
   }
   .slot-word {
     font-weight: 500;
@@ -112,7 +112,7 @@
     font-weight: 500;
     white-space: nowrap;
     line-height: 1;
-    opacity: .55;
+    opacity: .75;
   }
 
   /* ------ Header ------ */
