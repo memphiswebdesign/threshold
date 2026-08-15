@@ -408,12 +408,25 @@
     gap: var(--s6);
     align-items: start;
   }
+  .portrait-wrap {
+    display: block;
+    position: relative;
+  }
+  .portrait-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--copper);
+    transform: translate(5%, 5%);
+    pointer-events: none;
+  }
   .portrait {
     aspect-ratio: 3/4;
     width: 100%;
     object-fit: cover;
     object-position: top center;
     display: block;
+    position: relative;
   }
   .leader h2 {
     font-size: var(--t-display);
@@ -427,7 +440,7 @@
     letter-spacing: var(--tr-label);
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--black-40);
+    color: var(--copper);
     margin: var(--s2) 0 var(--s4);
   }
   .leader p {
