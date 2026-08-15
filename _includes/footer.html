@@ -1,6 +1,24 @@
-<footer class="mt-24 border-t border-bone-300">
-  <div class="mx-auto grid max-w-6xl gap-2 px-6 py-10 text-sm text-ink-500 sm:grid-cols-2">
-    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</p>
-    <p class="sm:text-right">{{ site.tagline }}</p>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="lockup">
+          {%- include thg-bug.svg -%}
+          <span class="lockup-text">
+            <span class="slot-word">Threshold</span>
+            <span class="slot-sub">Hospitality Group</span>
+          </span>
+        </span>
+        <p class="disciplines">Hospitality Management &middot; Owner Advisory &middot; Acquisitions</p>
+      </div>
+      <div class="foot-contact">
+        <span>Memphis, Tennessee</span>
+        <span class="foot-contact-sep">&middot;</span>
+        <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
+        <span class="foot-contact-sep">&middot;</span>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <p class="legal">&copy; {{ 'now' | date: "%Y" }} Threshold Hospitality Group. All rights reserved.</p>
   </div>
 </footer>

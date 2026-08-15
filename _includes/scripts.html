@@ -1,0 +1,58 @@
+<script>
+(function(){
+  /* ---------- Scroll animations ---------- */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els    = document.querySelectorAll('.rise');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(x){
+        if (x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); }
+      });
+    }, { threshold: .1, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  }
+
+  /* ---------- Sticky header rule ---------- */
+  var head     = document.getElementById('head');
+  var onScroll = function(){ head.classList.toggle('stuck', window.scrollY > 12); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ---------- Contact form ---------- */
+  var cf = document.getElementById('contact-form');
+  var cs = document.getElementById('form-success');
+  if (cf) {
+    cf.addEventListener('submit', function(e) {
+      e.preventDefault();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(cf)).toString()
+      }).then(function() {
+        cf.hidden = true;
+        cs.hidden = false;
+      }).catch(function() { cf.submit(); });
+    });
+  }
+
+  /* ---------- Mobile burger ---------- */
+  var b = document.getElementById('burger');
+  var m = document.getElementById('menu');
+  b.addEventListener('click', function(){
+    var open = m.classList.toggle('open');
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    b.setAttribute('aria-label',    open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  m.addEventListener('click', function(e){
+    if (e.target.tagName === 'A'){
+      m.classList.remove('open');
+      b.setAttribute('aria-expanded', 'false');
+      b.setAttribute('aria-label',    'Open menu');
+      document.body.style.overflow = '';
+    }
+  });
+})();
+</script>

@@ -1,14 +1,13 @@
 # Threshold Hospitality Group
 
 title: Threshold Hospitality Group
-tagline: Hospitality, considered.
 description: >-
-  Threshold Hospitality Group — placeholder description. Replace with the
-  approved copy from the brand content guide.
-email: ""
+  Threshold Hospitality Group partners with a select group of hotel owners and
+  investors through hospitality management, owner advisory, acquisitions, and
+  long-term asset stewardship.
 
-# TODO: set the production domain before launch
-url: "https://thresholdhospitality.com"
+url: "https://thresholdhospitalitygroup.com"
+contact_email: "contactus@thresholdhospitalitygroup.com"
 baseurl: ""
 
 # Build settings
