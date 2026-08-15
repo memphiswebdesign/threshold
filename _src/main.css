@@ -71,7 +71,7 @@
   }
   img  { max-width: 100%; display: block; }
   a    { color: inherit; }
-  :focus-visible { outline: 2px solid var(--copper); outline-offset: 4px; }
+  :focus-visible { outline: 1px solid var(--copper); outline-offset: 4px; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 }
 
@@ -314,7 +314,7 @@
     gap: var(--s5);
   }
   .service {
-    border-top: 2px solid var(--copper);
+    border-top: 1px solid var(--copper);
     padding-top: var(--s3);
   }
   .service h3 {
@@ -477,7 +477,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--s5);
   }
-  .adv { border-top: 2px solid var(--copper); padding-top: var(--s3); }
+  .adv { border-top: 1px solid var(--copper); padding-top: var(--s3); }
   .adv b {
     display: block;
     font-size: var(--t-h3);
