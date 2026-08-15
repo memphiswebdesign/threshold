@@ -1,11 +1,26 @@
-<header class="border-b border-bone-300">
-  <div class="mx-auto grid max-w-6xl grid-cols-[1fr_auto] items-center gap-4 px-6 py-6">
-    <a href="{{ '/' | relative_url }}" class="text-sm font-semibold uppercase tracking-[0.2em] text-ink-900">
-      Threshold
-    </a>
-    <nav class="flex gap-8 text-sm text-ink-700">
-      <a href="#about" class="hover:text-clay-600">About</a>
-      <a href="#contact" class="hover:text-clay-600">Contact</a>
-    </nav>
-  </div>
+<header class="site-head" id="head">
+  <a class="lockup" href="#top" aria-label="Threshold Hospitality Group, home">
+    <span class="slot-mark" aria-hidden="true"></span>
+    <span class="slot-word">Threshold</span>
+  </a>
+  <nav aria-label="Primary">
+    <ul class="site-nav">
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#advisory">Advisory Board</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+
+<div class="menu" id="menu">
+  <ul>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#advisory">Advisory Board</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
