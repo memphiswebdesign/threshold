@@ -288,7 +288,7 @@
   @media (max-width: 900px) { .pause { height: 64vh; } }
 
   /* ------ Core statement ------ */
-  .core { padding: var(--s8) 0; }
+  .core { padding-top: var(--s8); padding-bottom: var(--s8); }
   .core h2 {
     font-size: var(--t-mega);
     line-height: 1.08;
@@ -304,7 +304,7 @@
     margin: var(--s4) 0 0;
     line-height: 1.7;
   }
-  @media (max-width: 900px) { .core { padding: var(--s7) 0; } }
+  @media (max-width: 900px) { .core { padding-top: var(--s7); padding-bottom: var(--s7); } }
 
   /* ------ Services ------ */
   .services { padding-bottom: var(--s8); }
@@ -372,7 +372,7 @@
   @media (max-width: 900px) { .approach { padding: var(--s7) 0; } }
 
   /* ------ How we grow ------ */
-  .grow { padding: var(--s8) 0; }
+  .grow { padding-top: var(--s8); padding-bottom: var(--s8); }
   .grow h2 {
     font-size: var(--t-mega);
     line-height: 1.08;
@@ -402,7 +402,7 @@
   @media (max-width: 900px) {
     .grow-grid { grid-template-columns: 1fr; gap: var(--s4); }
   }
-  @media (max-width: 900px) { .grow { padding: var(--s7) 0; } }
+  @media (max-width: 900px) { .grow { padding-top: var(--s7); padding-bottom: var(--s7); } }
 
   /* ------ Leadership ------ */
   .leader { padding-bottom: var(--s8); }
