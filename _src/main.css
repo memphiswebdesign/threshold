@@ -514,12 +514,20 @@
     gap: var(--s5);
   }
   .adv { border-top: 1px solid var(--copper); padding-top: var(--s3); }
+  .adv-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: var(--s3);
+  }
   .adv b {
     display: block;
     font-size: var(--t-h3);
     font-weight: 500;
     letter-spacing: -.005em;
   }
+  .adv .area { display: none; }
   .adv .area {
     font-size: var(--t-label);
     letter-spacing: var(--tr-label);
