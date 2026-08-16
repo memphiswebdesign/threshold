@@ -527,7 +527,6 @@
     font-weight: 500;
     letter-spacing: -.005em;
   }
-  .adv .area { display: none; }
   .adv .area {
     font-size: var(--t-label);
     letter-spacing: var(--tr-label);
