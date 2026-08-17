@@ -11,9 +11,14 @@
 # then our build command compiles Tailwind before `jekyll build`.
 
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, no-cache"
 
 [[headers]]
   for = "/*"
